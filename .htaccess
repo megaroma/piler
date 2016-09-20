@@ -1,0 +1,34 @@
+DirectoryIndex index.php
+
+RewriteEngine On
+RewriteRule ^search.php /index.php?route=search/search&type=simple [L]
+RewriteRule ^advanced.php /index.php?route=search/search&type=advanced [L]
+RewriteRule ^expert.php /index.php?route=search/search&type=expert [L]
+RewriteRule ^search-helper.php /index.php?route=search/helper [L]
+RewriteRule ^audit-helper.php /index.php?route=audit/helper [L]
+RewriteRule ^message.php /index.php?route=message/view [L]
+RewriteRule ^bulkrestore.php /index.php?route=message/bulkrestore [L]
+RewriteRule ^bulkpdf.php /index.php?route=message/bulkpdf [L]
+RewriteRule ^folders.php /index.php?route=folder/list& [QSA,L]
+RewriteRule ^settings.php /index.php?route=user/settings [L]
+RewriteRule ^login.php /index.php?route=login/login [L]
+RewriteRule ^logout.php /index.php?route=login/logout [L]
+RewriteRule ^google.php /index.php?route=login/google [QSA,L]
+RewriteRule ^domain.php /index.php?route=domain/domain [QSA,L]
+RewriteRule ^ldap.php /index.php?route=ldap/list [QSA,L]
+RewriteRule ^customer.php /index.php?route=customer/list [QSA,L]
+RewriteRule ^retention.php /index.php?route=policy/retention [QSA,L]
+RewriteRule ^archiving.php /index.php?route=policy/archiving [QSA,L]
+RewriteRule ^view/javascript/piler.js /js.php [QSA,L]
+
+<IfModule auth_ntlm_winbind_module>
+   <FilesMatch "sso\.php$">
+      AuthName "piler NTLM authentication"
+      NTLMAuth on
+      NTLMAuthHelper "/usr/bin/ntlm_auth --helper-protocol=squid-2.5-ntlmssp"
+      NTLMBasicAuthoritative on
+      AuthType NTLM
+      require valid-user
+   </FilesMatch>
+</IfModule>
+
