@@ -40,7 +40,7 @@ Registry::set('db', $db);
 
 Registry::set('DB_DRIVER', DB_DRIVER);
 
-$sphx = new DB(SPHINX_DRIVER, SPHINX_HOSTNAME, "", "", SPHINX_DATABASE, "");
+$sphx = new DB(SPHINX_DRIVER, SPHINX_HOSTNAME, SPHINX_USERNAME, SPHINX_PASSWORD, SPHINX_DATABASE, "");
 Registry::set('sphx', $sphx);
 
 
