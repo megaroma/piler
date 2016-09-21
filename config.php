@@ -114,8 +114,8 @@ $config['IMAP_SSL'] = true;
 
 // enable authentication against a pop3 server (disabled by default)
 
-$config['ENABLE_POP3_AUTH'] = 0;
-$config['POP3_HOST'] = 'mail.yourdomain.com';
+$config['ENABLE_POP3_AUTH'] = 1;
+$config['POP3_HOST'] = '10.76.1.1';
 $config['POP3_PORT'] = 995;
 $config['POP3_SSL'] = true;
 
