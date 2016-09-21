@@ -1,6 +1,6 @@
 <?php
 
-$config['SITE_NAME'] = 'localhost';
+$config['SITE_NAME'] = '10.1.1.14';
 $config['SITE_URL'] = 'http://' . $config['SITE_NAME'] . '/';
 $config['DIR_BASE'] = '/var/www/piler/';
 
