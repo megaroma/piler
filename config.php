@@ -116,7 +116,7 @@ $config['IMAP_SSL'] = true;
 
 $config['ENABLE_POP3_AUTH'] = 1;
 $config['POP3_HOST'] = '10.76.1.1';
-$config['POP3_PORT'] = 995;
+$config['POP3_PORT'] = 110;//995;
 $config['POP3_SSL'] = true;
 
 // enable authentication against google (disabled by default)
