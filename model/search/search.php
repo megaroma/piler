@@ -3,6 +3,14 @@
 class ModelSearchSearch extends Model {
 
    public function search_messages($data = array(), $page = 0) {
+
+      $debug = "";
+
+      $debug .= "search_messagemodel\n";
+      $debug .= "data:\n";
+      $debug .= print_r($data,true);
+      $debug .= "\n page=".$page."\n";
+
       $one_page_of_ids = array();
       $total_hits = 0;
       $total_found = 0;
@@ -87,7 +95,7 @@ class ModelSearchSearch extends Model {
 
       $all_ids_csv = substr($all_ids_csv, 1, strlen($all_ids_csv));
 
-
+      echo $debug;
       return array($total_hits, $total_found, $all_ids_csv, $this->get_meta_data($one_page_of_ids, $q, $sortorder));
    }
 
