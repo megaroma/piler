@@ -223,7 +223,7 @@ class ModelSearchSearch extends Model {
          }
       }
 
-      print_r($data);
+
 
       if(isset($data['tag']) && $data['tag']) {
          $id_list = $this->get_sphinx_id_list($data['tag'], SPHINX_TAG_INDEX, 'tag');
@@ -239,6 +239,7 @@ class ModelSearchSearch extends Model {
       }
       else {
          $query = $this->sphx->query("SELECT id FROM " . SPHINX_MAIN_INDEX . " WHERE $a $id $date $attachment $direction $size $folders MATCH('$match') $sortorder LIMIT 0," . MAX_SEARCH_HITS . " OPTION max_matches=" . MAX_SEARCH_HITS);
+         echo "SELECT id FROM " . SPHINX_MAIN_INDEX . " WHERE $a $id $date $attachment $direction $size $folders MATCH('$match') $sortorder LIMIT 0," . MAX_SEARCH_HITS . " OPTION max_matches=" . MAX_SEARCH_HITS;         
       }
 
       $total_found = $query->total_found;
