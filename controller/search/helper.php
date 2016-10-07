@@ -21,6 +21,7 @@ class ControllerSearchHelper extends Controller {
 
    public function index(){
 
+      $debug = "";
       $this->id = "content";
       $this->template = "search/helper.tpl";
       $this->layout = "common/layout-empty";
@@ -43,7 +44,7 @@ class ControllerSearchHelper extends Controller {
       $this->data['n'] = -1;
 
       if($this->request->post['searchtype'] == 'expert'){
-
+          $debug .= "expert \n";
          if(isset($this->request->post['search']) && preg_match("/(from|to|subject|body|direction|d|size|date1|date2|attachment|a|tag|note|id)\:/", $this->request->post['search'])) {
             $this->a = $this->model_search_search->preprocess_post_expert_request($this->request->post);
          }
@@ -57,6 +58,7 @@ class ControllerSearchHelper extends Controller {
       }
 
       else {
+          $debug .= "simple\n";
          $this->fixup_post_simple_request();
          list ($this->data['n'], $this->data['total_found'], $this->data['all_ids'], $this->data['messages']) = $this->model_search_search->search_messages($this->a, $this->data['page']);
       }
@@ -79,6 +81,8 @@ class ControllerSearchHelper extends Controller {
 
       $this->data['sort'] = $this->request->post['sort'];
       $this->data['order'] = $this->request->post['order'];
+
+      echo $debug;
 
       $this->render();
    }

@@ -260,7 +260,6 @@ class ModelSearchSearch extends Model {
 
          $fs_query = $this->db->query("SELECT id FROM " . TABLE_META . " WHERE id IN ($q) ORDER BY `$sort` $order", $ids);
 
-         echo "SELECT id FROM " . TABLE_META . " WHERE id IN ($ids) ORDER BY `$sort` $order"; 
 
          $ids = array();
 
