@@ -223,6 +223,7 @@ class ModelSearchSearch extends Model {
          }
       }
 
+      print_r($data);
 
       if(isset($data['tag']) && $data['tag']) {
          $id_list = $this->get_sphinx_id_list($data['tag'], SPHINX_TAG_INDEX, 'tag');
