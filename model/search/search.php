@@ -58,9 +58,11 @@ class ModelSearchSearch extends Model {
 
          if(isset($data['ref']) && $data['ref']){
             list ($total_found, $all_ids) = $this->query_all_possible_IDs_by_reference($data['ref'], $cache_key);
+            $debug .= "query_all_possible_IDs_by_reference (".$data['ref']." ".$cache_key.")\n";
          }
          else {
             list ($total_found, $all_ids) = $this->query_all_possible_IDs($data, $sort, $order, $sortorder, $cache_key);
+            $debug .= "query_all_possible_IDs (".$data." ".$sort." ".$order." ".$sortorder." ".$cache_key.")\n";
          }
       }
 
