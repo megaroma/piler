@@ -97,7 +97,7 @@ class ModelSearchSearch extends Model {
 
       $all_ids_csv = substr($all_ids_csv, 1, strlen($all_ids_csv));
 
-      echo $debug;
+      //echo $debug;
       return array($total_hits, $total_found, $all_ids_csv, $this->get_meta_data($one_page_of_ids, $q, $sortorder));
    }
 
@@ -239,7 +239,7 @@ class ModelSearchSearch extends Model {
       }
       else {
          $query = $this->sphx->query("SELECT id FROM " . SPHINX_MAIN_INDEX . " WHERE $a $id $date $attachment $direction $size $folders MATCH('$match') $sortorder LIMIT 0," . MAX_SEARCH_HITS . " OPTION max_matches=" . MAX_SEARCH_HITS);
-         echo "SELECT id FROM " . SPHINX_MAIN_INDEX . " WHERE $a $id $date $attachment $direction $size $folders MATCH('$match') $sortorder LIMIT 0," . MAX_SEARCH_HITS . " OPTION max_matches=" . MAX_SEARCH_HITS;         
+
       }
 
       $total_found = $query->total_found;

@@ -82,7 +82,7 @@ class ControllerSearchHelper extends Controller {
       $this->data['sort'] = $this->request->post['sort'];
       $this->data['order'] = $this->request->post['order'];
 
-      echo $debug;
+      //echo $debug;
 
       $this->render();
    }
