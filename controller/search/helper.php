@@ -20,7 +20,7 @@ class ControllerSearchHelper extends Controller {
 
 
    public function index(){
-    echo "Boooo Index";
+
       $this->id = "content";
       $this->template = "search/helper.tpl";
       $this->layout = "common/layout-empty";
@@ -61,7 +61,7 @@ class ControllerSearchHelper extends Controller {
          list ($this->data['n'], $this->data['total_found'], $this->data['all_ids'], $this->data['messages']) = $this->model_search_search->search_messages($this->a, $this->data['page']);
       }
 
-
+      print_r($this->data);
 
       if($this->a['ref']) { $this->data['_ref'] = $this->a['ref']; }
       if(isset($this->request->post['ref']) && $this->request->post['ref']) { $this->data['_ref'] = $this->request->post['ref']; }
