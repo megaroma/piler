@@ -191,9 +191,9 @@ $config['DB_USERNAME'] = 'piler';
 $config['DB_PASSWORD'] = 'treadmill';
 $config['DB_DATABASE'] = 'piler';
 
-$config['SPHINX_DRIVER'] = 'mysql';
+$config['SPHINX_DRIVER'] = 'sphinx';
 $config['SPHINX_DATABASE'] = 'piler';
-$config['SPHINX_HOSTNAME'] = 'localhost';
+$config['SPHINX_HOSTNAME'] = '127.0.0.1:9306';
 $config['SPHINX_MAIN_INDEX'] = 'main1,dailydelta1,delta1';
 $config['SPHINX_TAG_INDEX'] = 'tag1';
 $config['SPHINX_NOTE_INDEX'] = 'note1';
