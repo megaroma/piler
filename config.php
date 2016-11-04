@@ -191,7 +191,7 @@ $config['DB_USERNAME'] = 'piler';
 $config['DB_PASSWORD'] = 'treadmill';
 $config['DB_DATABASE'] = 'piler';
 
-$config['SPHINX_DRIVER'] = 'sphynx';
+$config['SPHINX_DRIVER'] = 'sphinx';
 $config['SPHINX_DATABASE'] = '';
 $config['SPHINX_HOSTNAME'] = '127.0.0.1:9306';
 $config['SPHINX_MAIN_INDEX'] = 'main1,dailydelta1,delta1';
