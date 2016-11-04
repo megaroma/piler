@@ -12,7 +12,7 @@ class Sphinx {
          $this->link = new PDO("mysql:host=$host;port=$port;dbname=$database;charset=utf8", $username, $password);
       }
       catch(PDOException $exception) {
-         exit('Error: ' . $exception->getMessage() . " on database: $database<br />");
+         exit('Error Shynx connect: ' . $exception->getMessage() . " on database: $database<br />");
       }
 
 
