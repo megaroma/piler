@@ -192,13 +192,13 @@ $config['DB_PASSWORD'] = 'treadmill';
 $config['DB_DATABASE'] = 'piler';
 
 $config['SPHINX_DRIVER'] = 'sphinx';
-$config['SPHINX_DATABASE'] = 'piler';
+$config['SPHINX_DATABASE'] = '';
 $config['SPHINX_HOSTNAME'] = '127.0.0.1:9306';
 $config['SPHINX_MAIN_INDEX'] = 'main1,dailydelta1,delta1';
 $config['SPHINX_TAG_INDEX'] = 'tag1';
 $config['SPHINX_NOTE_INDEX'] = 'note1';
-$config['SPHINX_USERNAME'] = 'piler';
-$config['SPHINX_PASSWORD'] = 'treadmill';
+$config['SPHINX_USERNAME'] = '';
+$config['SPHINX_PASSWORD'] = '';
 
 
 
